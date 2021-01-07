@@ -43,6 +43,6 @@ variable "authorized_subnet_ids" {
 }
 
 variable "storage_share_quota" {
-  type = number
+  type    = number
   default = 5
 }
