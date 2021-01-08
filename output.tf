@@ -16,6 +16,10 @@ output "secondary_access_key" {
   sensitive = true
 }
 
-output "storage_share_name" {
-  value = azurerm_storage_share.main.name
+output "storage_container_name" {
+  value = azurerm_storage_container.main.name
+}
+
+output "storage_container_id" {
+  value = azurerm_storage_container.main.id
 }

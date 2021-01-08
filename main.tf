@@ -42,10 +42,9 @@ resource "azurerm_storage_account_network_rules" "main" {
   bypass                     = var.network_acl_bypass
 }
 
-resource "azurerm_storage_share" "main" {
+resource "azurerm_storage_container" "main" {
   name                 = "${var.base_name}-vault-snapshots"
   storage_account_name = azurerm_storage_account.main.name
-  quota                = var.storage_share_quota
 
   metadata = var.tags
 }
